@@ -1,12 +1,13 @@
 {
     "name":         "sm-parsers",
-    "version":      "0.1.0",
+    "version":      "0.1.1",
     "description":  "MP3 and AAC parsers for StreamMachine",
     "keywords":     ["streammachine","mp3","aac"],
     "homepage":     "https://github.com/StreamMachine/sm-parsers/",
     "author":       {"name": "Eric Richardson", "url": "http://ewr.is"},
     "repository":   {"type": "git", "url": "https://github.com/StreamMachine/sm-parsers.git"},
     "main":         "./index.js",
+    "license":      "MIT",
     "engines": {
         "node": ">=0.10.0"
     },
