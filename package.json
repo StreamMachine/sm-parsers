@@ -1,6 +1,6 @@
 {
     "name":         "sm-parsers",
-    "version":      "0.1.1",
+    "version":      "0.1.2",
     "description":  "MP3 and AAC parsers for StreamMachine",
     "keywords":     ["streammachine","mp3","aac"],
     "homepage":     "https://github.com/StreamMachine/sm-parsers/",

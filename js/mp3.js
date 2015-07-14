@@ -326,7 +326,7 @@ module.exports = MP3 = (function(_super) {
     } else {
       r.samplesPerFrame = (r.mpegID === MPEG1_ID) || (r.layerID === LAYER2_ID) ? 1152 : 576;
       r.bytesPerSlot = 1;
-      r.frameSizeRaw = 144 * (r.bitrateKBPS * 1000) / r.samplingRateHz + (r.padding ? 1 : 0);
+      r.frameSizeRaw = (r.samplesPerFrame / 8) * (r.bitrateKBPS * 1000) / r.samplingRateHz + (r.padding ? 1 : 0);
     }
     r.frameSize = ~~r.frameSizeRaw;
     if (!r.frameSize) {

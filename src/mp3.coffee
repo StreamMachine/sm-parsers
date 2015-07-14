@@ -376,7 +376,7 @@ module.exports = class MP3 extends require("stream").Transform
             # layer 3: MPEG1: 1152 samples/frame, MPEG2/2.5: 576 samples/frame
             r.samplesPerFrame   = if (r.mpegID == MPEG1_ID) || (r.layerID == LAYER2_ID) then 1152 else 576
             r.bytesPerSlot      = 1
-            r.frameSizeRaw      = 144 * (r.bitrateKBPS*1000) / r.samplingRateHz + (if r.padding then 1 else 0)
+            r.frameSizeRaw      = (r.samplesPerFrame / 8) * (r.bitrateKBPS*1000) / r.samplingRateHz + (if r.padding then 1 else 0)
 
         # Make the frameSize be the proper floor'd byte length
         r.frameSize = ~~r.frameSizeRaw
